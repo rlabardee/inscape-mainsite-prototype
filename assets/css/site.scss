@@ -46,6 +46,7 @@ $icon-font-path: '~open-iconic/font/fonts/';
 // components
 @import "./components/header";
 @import "./components/hero";
+@import "./components/photo";
 
 // .container {
 //   outline: 1px solid red;
@@ -70,4 +71,16 @@ $icon-font-path: '~open-iconic/font/fonts/';
 .placeholder {
   height: 300vh;
   background: linear-gradient(#ccc, $purple);
+}
+
+%scroll_reveal_element {
+  visibility: hidden;
+}
+
+html.sr .load-hidden {
+  @extend %scroll_reveal_element;
+}
+
+.narrative figure {
+  @extend %scroll_reveal_element;
 }

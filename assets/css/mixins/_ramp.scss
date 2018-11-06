@@ -11,7 +11,12 @@ $ramp_poly_L2R_01: polygon(0 0, 0 0, 0% 0%, 0 100%);
 // left and right start equal
 $ramp_poly_half_cover: polygon(0 0, 100% 0, 100% 55%, 0 55%);
 
+// fx
+// --
+$ramp-cubic-bezier: cubic-bezier(0, 0.79, 0.18, 1);
 
+// $colors: $blue, $purple, $orange, $pink;
+// background: nth($colors, random(length($colors) + 1));
 
 @mixin ramp_fill__top_down {
   top: ($ramp_height / 2) * -1;     // ramp is half way in view
@@ -42,7 +47,7 @@ $ramp_poly_half_cover: polygon(0 0, 100% 0, 100% 55%, 0 55%);
   animation-duration: 1s;
   animation-direction: normal;
   animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0, 0.79, 0.18, 1);
+  animation-timing-function: $ramp-cubic-bezier;
   animation-fill-mode: forwards;
 }
 
@@ -102,13 +107,14 @@ $ramp_poly_half_cover: polygon(0 0, 100% 0, 100% 55%, 0 55%);
   100% {
     top: 0;                             // ramp is in view
     clip-path: $ramp_poly_half_cover;   // clip is equal
-    background: rgba(#fff, 1);
+    background: $light;
+    color: #fff;
   }
 }
 
 @keyframes ramp_nav_in {
   100% {
     // opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(30%);
   }
 }

@@ -5,6 +5,52 @@ title: Home
 <%= partial "components/header" %>
 <%= partial "components/hero" %>
 
-<div class="placeholder">
+<!-- <div class="placeholder">
 
+</div> -->
+
+
+<div style="height: 10vh; width: 100%;"></div>
+
+<div class="narrative container mt-5 mb-5">
+  <div class="narrative__block narrative__block--right row">
+    <div class="col-sm-6">
+      <figure class="photo ramp__filter">
+        <img class="photo__img" src="//inscape-rockit.com/assets/img/photos/banner_01/photo_1199.jpg" alt="">
+      </figure>
+    </div>
+
+    <div class="col-sm-6 d-flex align-content-center flex-wrap">
+      <h3 class="sr-element">
+        <%= lorem.sentence().titleize %>
+      </h3>
+      <p class="sr-element">
+        <%= lorem.paragraphs(1) %>
+      </p>
+      <a class="sr-element" href="#"><%= lorem.words(3).titleize %></a>
+    </div>
+  </div>
 </div>
+
+<div class="narrative container mt-5 mb-5">
+  <div class="narrative__block narrative__block--left flex-row-reverse row">
+    <div class="col-sm-6">
+      <figure class="photo ramp__filter">
+        <img class="photo__img" src="//inscape-rockit.com/assets/img/photos/banner_01/photo_1199.jpg" alt="">
+      </figure>
+    </div>
+
+    <div class="col-sm-6 d-flex align-content-center flex-wrap">
+      <h3 class="sr-element">
+        <%= lorem.sentence().titleize %>
+      </h3>
+      <p class="sr-element">
+        <%= lorem.paragraphs(1) %>
+      </p>
+      <a href="#" class="sr-element">
+        <%= lorem.words(3).titleize %></a>
+    </div>
+  </div>
+</div>
+
+<div style="height: 100vh; width: 100%;"></div>

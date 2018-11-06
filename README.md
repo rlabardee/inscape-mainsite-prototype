@@ -1,12 +1,6 @@
-# Middleman Template
+# Inscape Mainsite Prototype
 
-The base Middleman application used at [Stone Ward], ready to deploy
-to [Netlify].
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stone-ward/middleman-template)
-
-  [Stone Ward]: https://stoneward.com/
-  [Netlify]: https://www.netlify.com/
+A framework base Middleman application ready to deploy to [Netlify].
 
 ## Configuration
 
@@ -20,23 +14,3 @@ This template uses [Webpack] for asset processing through the external pipeline.
   [Sass]: https://sass-lang.com
   [Autoprefixer]: https://github.com/postcss/autoprefixer
   [Babel]: https://babeljs.io
-
-## Use
-
-`middleman init MY_PROJECT_FOLDER -T git@github.com:stone-ward/middleman-template.git`
-
-`cd MY_PROJECT_FOLDER`
-
-Install dependencies:
-
-`bundle`
-
-`yarn`
-
-Server:
-
-`bundle exec middleman`
-
-Build:
-
-`bundle exec middleman build`
