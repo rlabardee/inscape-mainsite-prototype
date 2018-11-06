@@ -1,0 +1,114 @@
+$ramp_height: 178px;
+
+$ramp_poly_final: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+$ramp_poly_cover: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+$ramp_poly_no_cover: polygon(0 0, 100% 0, 100% 0, 0 0);
+$ramp_poly_cover_left_only: polygon(0 0, 100% 0, 100% 0, 0 100%);
+
+// left tp right
+$ramp_poly_L2R_01: polygon(0 0, 0 0, 0% 0%, 0 100%);
+
+// left and right start equal
+$ramp_poly_half_cover: polygon(0 0, 100% 0, 100% 55%, 0 55%);
+
+
+
+@mixin ramp_fill__top_down {
+  top: ($ramp_height / 2) * -1;     // ramp is half way in view
+  clip-path: $ramp_poly_no_cover;   // clip is totally hidden
+  background: rgba(#fff, 0.75);
+}
+
+@mixin ramp_fill__top_down_leftside {
+  top: 0;                             // ramp is in view
+  clip-path: $ramp_poly_half_cover;   // clip is equal
+  background: rgba(#fff, 0);
+}
+
+
+@mixin ramp_fill__left_right {
+  top: 0;
+  clip-path: $ramp_poly_L2R_01;   // clip is totally hidden
+  background: rgba(#fff, 0.75);
+}
+
+
+.ramp__clip {
+  // properties that will be animated
+  @include ramp_fill__top_down_leftside();
+
+  // trigger the animating...
+  animation-name: ramp_in;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.79, 0.18, 1);
+  animation-fill-mode: forwards;
+}
+
+.header-normal .ramp__clip {
+  // properties that will be animated
+  clip-path: $ramp_poly_final;
+  background: #fff;
+  top: 0;
+
+  // trigger the animating...
+  animation-name: ramp_out;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.79, 0.18, 1);
+  animation-fill-mode: forwards;
+}
+
+
+.navbar{
+  // properties that will be animated
+  transform: translateY(50%);
+
+  // trigger the animating...
+  animation-name: ramp_nav_in;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.79, 0.18, 1);
+  animation-fill-mode: forwards;
+}
+
+// .navbar-nav, .form-inline {
+//   // properties that will be animated
+//   opacity: 0;
+
+//   // trigger the animating...
+//   animation-name: ramp_nav_in;
+//   animation-duration: 0.55s;
+//   animation-delay: 0.4s;
+//   animation-direction: normal;
+//   animation-iteration-count: 1;
+//   animation-timing-function: ease-in-out;
+//   animation-fill-mode: forwards;
+// }
+
+
+@keyframes ramp_in {
+  100% {
+    clip-path: $ramp_poly_final;
+    background: #fff;
+    top: 0;
+  }
+}
+
+@keyframes ramp_out {
+  100% {
+    top: 0;                             // ramp is in view
+    clip-path: $ramp_poly_half_cover;   // clip is equal
+    background: rgba(#fff, 1);
+  }
+}
+
+@keyframes ramp_nav_in {
+  100% {
+    // opacity: 1;
+    transform: translateY(0px);
+  }
+}

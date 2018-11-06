@@ -1,0 +1,44 @@
+
+.hero {
+  outline: 1px solid blue;
+  height: 48vh;
+  position: relative;
+  text-align: center;
+
+  &.text-light .hero__headline {
+    text-shadow: 0 0 20px rgba(#000, 0.18), 0 0 100px rgba(#000, 0.5);
+  }
+}
+
+.hero__headline {
+  margin: 3rem 0 2rem;
+}
+
+.hero__richtext {
+
+}
+
+.hero__cta {
+  display: block;
+  margin: 0.5rem auto 0;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0, 1.13, 0.49, 0.99) 0.1s;
+
+  &.loaded {
+    opacity: 1;
+  }
+}

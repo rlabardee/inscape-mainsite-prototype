@@ -1,0 +1,37 @@
+@import "../mixins/ramp";
+
+$ramp_height: 178px;
+
+.header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: $ramp_height;
+  z-index: 2;
+}
+
+// .ramp__svg {
+//   width: 100%;
+//   height: auto;
+
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+
+//   fill: red;
+//   outline: 1px solid blue;
+// }
+
+// .ramp__knockout {
+//   height: 0;
+//   width: 100%;
+//   border-left: 0px solid transparent;
+//   border-right: 100vw solid red;
+//   border-bottom: 0px solid transparent;
+//   border-top: 95px solid transparent;
+// }
+
+// .ramp__clip {
+
+// }
