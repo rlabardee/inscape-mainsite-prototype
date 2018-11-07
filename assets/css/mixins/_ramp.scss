@@ -107,7 +107,7 @@ $ramp-cubic-bezier: cubic-bezier(0, 0.79, 0.18, 1);
   100% {
     top: 0;                             // ramp is in view
     clip-path: $ramp_poly_half_cover;   // clip is equal
-    background: $light;
+    background: $gray-200;
     color: #fff;
   }
 }
