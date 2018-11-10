@@ -1,0 +1,33 @@
+<figure class="figure figure--zoom ramp__filter">
+  <img class="figure__img" src="//inscape-rockit.com/assets/img/photos/banner_01/photo_1199.jpg" alt="">
+  <figcaption class="figure-caption d-flex flex-column align-items-center justify-content-center flex-wrap">
+    <h4>
+      <%= lorem.words(4).titleize %>
+    </h4>
+    <p>
+      <%= lorem.sentence() %>
+    </p>
+    <button class="btn btn-dark" data-toggle="modal" data-target="#figureModal">Zoom</button>
+  </figcaption>
+
+  <div class="modal fade" id="figureModal" tabindex="-1" role="dialog" aria-labelledby="figureModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= lorem.words(4).titleize %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="" src="//inscape-rockit.com/assets/img/photos/banner_01/photo_1199.jpg" alt="">
+        </div>
+        <div class="modal-body">
+          <button class="btn btn-small btn-dark"><%= lorem.words(1).titleize %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</figure>
+
+
