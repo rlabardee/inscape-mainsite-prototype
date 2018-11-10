@@ -4,8 +4,9 @@ import ScrollReveal from 'scrollreveal';
 class Narrative {
   constructor (element) {
     this.$element = $(element);
-    this.revealPhoto();
-    this.revealCopy();
+
+    if (this.$element.hasClass('narrative--reveal-photo')) this.revealPhoto();
+    if (this.$element.hasClass('narrative--reveal-copy')) this.revealCopy();
   }
 
   revealCopy () {
@@ -33,7 +34,7 @@ class Narrative {
   }
 
   revealPhoto () {
-    ScrollReveal().reveal('.narrative figure', {
+    ScrollReveal().reveal('.narrative img', {
       duration: 600,
       easing: 'cubic-bezier(.5,0,0,1)',
       interval: 600,

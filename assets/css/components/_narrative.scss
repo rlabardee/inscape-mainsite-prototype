@@ -1,0 +1,40 @@
+
+.narrative .figure {
+  margin-bottom: 0;
+}
+
+// .narrative .flex-row-reverse .ramp__filter::before {
+//   clip-path: polygon(0 60%, 100% 80%, 100% 100%, 0 100%);
+// }
+
+// offset the outside edge when we are not in a container
+// .narrative :not(.container) {
+//   &.narrative__block--left .narrative__body {
+//     padding-left: $grid-gutter-width;
+//   }
+
+//   &.narrative__block--right .narrative__body {
+//     padding-right: $grid-gutter-width;
+//   }
+// }
+
+.narrative__block--left .narrative__body {
+  padding: 0 6vw 0 8vw;
+}
+
+.narrative__block--right .narrative__body {
+  padding: 0 8vw 0 6vw;
+}
+
+.narrative:not(.mt-5),
+.narrative:not(.mb-5) {
+  .narrative__body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+// if we are revealing this, hide it while its loading
+.narrative--reveal-photo img {
+  @extend %scroll_reveal_element;
+}
