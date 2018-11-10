@@ -1,0 +1,70 @@
+---
+title: CMP Narrative
+---
+
+<% vertical_spacing   = "" %>
+<!-- mt-5 mb-5 -->
+
+<% flex_settings      = "d-flex flex-column justify-content-center align-content-center flex-wrap" %>
+
+<% grid_gutters       = "no-gutters" %>
+<% grid_block_img     = "col-sm-12 col-md-6 col-lg-6" %>
+<% grid_block_copy    = "col-sm-12 col-md-6 col-lg-6" %>
+
+
+<div class="narrative <%= vertical_spacing %>">
+  <div class="narrative__block narrative__block--right row <%= grid_gutters %>">
+    <div class="<%= grid_block_img %>">
+      <%= partial "components/figure" %>
+    </div>
+
+    <div class="narrative__body <%= grid_block_copy %> <%= flex_settings %>">
+      <h3 class="sr-element">
+        <%= lorem.words(4).titleize %>
+      </h3>
+      <p class="sr-element">
+        <%= lorem.sentence() %>
+      </p>
+      <a class="sr-element" href="#">
+        <%= lorem.words(3).titleize %></a>
+    </div>
+  </div>
+</div>
+
+<div class="narrative <%= vertical_spacing %>">
+  <div class="narrative__block narrative__block--left flex-row-reverse row <%= grid_gutters %>">
+    <div class="<%= grid_block_img %>">
+      <%= partial "components/figure" %>
+    </div>
+
+    <div class="narrative__body <%= grid_block_copy %> <%= flex_settings %>">
+      <h3 class="sr-element">
+        <%= lorem.words(4).titleize %>
+      </h3>
+      <p class="sr-element">
+        <%= lorem.sentence() %>
+      </p>
+      <a href="#" class="sr-element">
+        <%= lorem.words(3).titleize %></a>
+    </div>
+  </div>
+</div>
+
+<div class="narrative narrative--carousel <%= vertical_spacing %>">
+  <div class="narrative__block narrative__block--right row <%= grid_gutters %>">
+    <div class="<%= grid_block_img %>">
+      <%= partial "components/carousel" %>
+    </div>
+
+    <div class="narrative__body <%= grid_block_copy %> <%= flex_settings %>">
+      <h3 class="sr-element">
+        <%= lorem.words(4).titleize %>
+      </h3>
+      <p class="sr-element">
+        <%= lorem.sentence() %>
+      </p>
+      <a href="#" class="sr-element">
+        <%= lorem.words(3).titleize %></a>
+    </div>
+  </div>
+</div>
