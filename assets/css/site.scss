@@ -46,7 +46,9 @@ $icon-font-path: '~open-iconic/font/fonts/';
 // components
 @import "./components/header";
 @import "./components/hero";
-@import "./components/photo";
+@import "./components/figure";
+@import "./components/carousel";
+@import "./components/narrative";
 
 // .container {
 //   outline: 1px solid red;
@@ -81,6 +83,11 @@ html.sr .load-hidden {
   @extend %scroll_reveal_element;
 }
 
-.narrative figure {
-  @extend %scroll_reveal_element;
+// .narrative figure {
+//   @extend %scroll_reveal_element;
+// }
+
+.note {
+  padding: 1rem 1rem 0;
+  display: block;
 }
