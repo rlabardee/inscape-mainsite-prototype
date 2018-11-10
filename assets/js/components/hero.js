@@ -4,19 +4,23 @@ class Hero {
   constructor (element) {
     this.$element = $(element);
     this.$heroImage = this.$element.find('.hero__image');
+    this.imgEl = new Image();
     this.loadBackgroundImage();
   }
 
-  loadBackgroundImage () {
-    let img = new Image();
+  update () {
+    this.$heroImage.css({
+      'background-image': `url(${this.imgEl.src})`
+    }).addClass('loaded');
+  }
 
-    img.addEventListener('load', () => {
-      this.$heroImage.css({
-        'background-image': `url(${img.src})`
-      }).addClass('loaded');
+  loadBackgroundImage () {
+    this.imgEl.addEventListener('load', () => {
+      this.update();
     }, false);
 
-    img.src = '//inscape-rockit.com/assets/img/photos/slide_03/photo_2880.jpg';
+    // assign a source to the img to begin loading
+    this.imgEl.src = this.$heroImage.data('src');
   }
 }
 
